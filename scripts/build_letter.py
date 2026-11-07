@@ -212,3 +212,48 @@ body.append('<div class="flip box"><b>Solutions printed upside down.</b><br>I. '
 html = f'<!doctype html><html><head><meta charset="utf-8"><title>The Morning Letter</title><style>{css}</style></head><body>'+'\n'.join(body)+'</body></html>'
 open('letter.html','w').write(html)
 print(len(html))
+
+# ---- Phone reading view (reader.html): same content, reflowing, large type ----
+import re, base64, os
+rcss = '''
+*{box-sizing:border-box} html{-webkit-text-size-adjust:100%}
+body{margin:0;background:#f7f0dd;color:#2b2118;font-family:"Latin Modern Roman","CMU Serif",Georgia,serif;font-size:19px;line-height:1.55;text-align:left}
+.wrap{padding:14px 16px 30px;max-width:720px;margin:0 auto}
+h1{font-variant:small-caps;font-weight:normal;text-align:center;font-size:2rem;line-height:1.15;margin:6px 0;color:#4a3618}
+.sub{text-align:center;font-style:italic;font-size:.9rem;color:#5a4526}
+.date{text-align:center;font-variant:small-caps;letter-spacing:.08em;font-size:1.05rem;margin:8px 0 0}
+.orn{text-align:center;color:#8a6a35;margin:2px 0 10px}
+h2{font-variant:small-caps;font-weight:normal;text-align:center;font-size:1.45rem;letter-spacing:.05em;margin:34px 0 10px;padding-top:14px;border-top:1px solid #b99d62;color:#4a3618}
+h2::before,h2::after{content:"\\2766";color:#8a6a35;font-size:.9rem;margin:0 .5em}
+h3{font-size:1.1rem;margin:20px 0 4px}
+p{margin:0 0 12px}
+.tw{overflow-x:auto;margin:8px -4px 14px;padding:0 4px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%}
+.wx{min-width:520px} .wx th,.wx td{border:1px solid #b99d62;padding:5px 3px;text-align:center;font-size:.8rem}
+.wx th{background:#efe3c3;font-weight:normal;font-variant:small-caps}
+.wx td.l{text-align:left;font-variant:small-caps;background:#f3e9cd;white-space:nowrap}
+.wx small{font-size:.7rem;color:#5a4526}
+.ic{width:20px;height:20px;vertical-align:middle}
+.alm td{border:none;border-bottom:1px dotted #b99d62;padding:5px 4px;font-size:.95rem;text-align:left}
+.alm td:nth-child(even){text-align:right}
+.mk{min-width:420px} .mk td,.mk th{border:1px solid #b99d62;padding:6px 8px;font-size:.9rem;text-align:left}
+.mk th{background:#efe3c3;font-weight:normal;font-variant:small-caps}
+.picks{margin:4px 0 12px 1.2em;padding:0} .picks li{margin-bottom:8px}
+.note{font-size:.85rem;font-style:italic;color:#5a4526}
+.ps{font-style:italic}.sign{margin-top:16px}
+.foot{text-align:center;font-size:.8rem;color:#6b5a3c;font-style:italic;margin-top:18px}
+.two{display:block} .two>div{margin-bottom:12px}
+.board{text-align:center}.board svg{width:100%;max-width:340px;height:auto}
+ol.clues{margin:4px 0 12px 1.3em;padding:0} ol.clues li{margin-bottom:6px}
+.comic img{width:100%;height:auto;border:1px solid #8a6a35}
+.flip{transform:rotate(180deg);font-size:.8rem;border-top:1px solid #b99d62;padding-top:6px;margin-top:20px}
+'''
+def _reader(parts):
+    h = '\n'.join(parts)
+    h = re.sub(r'<table', '<div class="tw"><table', h); h = h.replace('</table>', '</table></div>')
+    h = h.replace('<div class="page pastimes">', '<div class="pastimes">')
+    if os.path.exists('comic/today.png'):
+        b64 = base64.b64encode(open('comic/today.png','rb').read()).decode()
+        h = h.replace('src="comic/today.png"', 'src="data:image/png;base64,'+b64+'"')
+    return h
+open('reader.html','w').write('<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>The Morning Letter</title><style>'+rcss+'</style></head><body><div class="wrap">'+_reader(body)+'</div></body></html>')
