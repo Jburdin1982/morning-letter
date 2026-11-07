@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#8a6a35">
+<title>The Morning Letter</title>
+<link rel="manifest" href="manifest.json"><link rel="icon" href="icons/icon-192.png">
+<style>
+:root{--cream:#f7f0dd;--ink:#3a2a14;--gold:#8a6a35;--soft:#efe5c8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Latin Modern Roman','CMU Serif',Georgia,'Times New Roman',serif;-webkit-text-size-adjust:100%}
+.frame{max-width:760px;margin:10px auto;padding:14px 14px 28px;border:3px double var(--gold);min-height:calc(100vh - 20px)}
+header{text-align:center;padding:4px 0 8px;border-bottom:1px solid var(--gold)}
+h1{margin:0;font-variant:small-caps;font-weight:normal;font-size:2rem;letter-spacing:.04em}
+.sub{font-style:italic;font-size:.85rem;opacity:.85;margin-top:2px}
+.orn{color:var(--gold);margin:0 .4em}
+nav{display:flex;gap:8px;align-items:center;justify-content:center;flex-wrap:wrap;margin:12px 0}
+button,input[type=date],a.btn{font:inherit;color:var(--ink);background:var(--soft);border:1px solid var(--gold);border-radius:6px;padding:8px 12px;min-height:42px;text-decoration:none;cursor:pointer}
+button:disabled{opacity:.4}
+button.pri,a.btn.pri{background:var(--gold);color:var(--cream)}
+.datebar{text-align:center;font-variant:small-caps;font-size:1.15rem;margin:6px 0 10px}
+.pages img{display:block;width:100%;height:auto;margin:0 auto 14px;border:1px solid var(--gold);background:#fff;box-shadow:0 1px 4px rgba(58,42,20,.2)}
+.msg{text-align:center;font-style:italic;padding:30px 10px}
+h2{font-variant:small-caps;font-weight:normal;text-align:center;margin:18px 0 8px}
+.arch{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:8px}
+.arch li button{width:100%;text-align:left}
+.foot{text-align:center;font-size:.8rem;font-style:italic;opacity:.8;margin-top:18px}
+.hide{display:none}
+</style></head><body><div class="frame">
+<header><h1><span class="orn">❦</span>The Morning Letter<span class="orn">❦</span></h1>
+<div class="sub">A daily word from the Household Gazette to Jonesboro, Brookland &amp; neighbors</div></header>
+<nav>
+ <button id="prev" title="Earlier letter">&larr; Earlier</button>
+ <input type="date" id="pick" aria-label="Pick a date">
+ <button id="next" title="Later letter">Later &rarr;</button>
+ <button id="latest" class="pri">Today&rsquo;s letter</button>
+</nav>
+<div class="datebar" id="dbar"></div>
+<div style="text-align:center;margin-bottom:12px"><a class="btn" id="pdf" href="#" target="_blank" rel="noopener">Download PDF</a>
+ <button id="arbtn">Archive</button></div>
+<div id="msg" class="msg">Fetching the letter&hellip;</div>
+<div class="pages" id="pages"></div>
+<section id="archive" class="hide"><h2>The Archive</h2><ul class="arch" id="list"></ul></section>
+<div class="foot">Compiled from many reports. Local election results are unofficial until certified.</div>
+</div>
+<script>
+let L=[],cur=-1;
+const $=id=>document.getElementById(id);
+function fmt(d){const [y,m,dd]=d.split('-').map(Number);return new Date(y,m-1,dd).toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});}
+function show(i,push){
+  if(i<0||i>=L.length)return;cur=i;const l=L[i];
+  $('dbar').textContent=fmt(l.date);$('pick').value=l.date;
+  $('pdf').href=l.pdf;$('pdf').classList.remove('hide');
+  $('prev').disabled=i===0;$('next').disabled=i===L.length-1;
+  $('latest').disabled=i===L.length-1;
+  const box=$('pages');box.innerHTML='';$('msg').classList.add('hide');
+  l.page_images.forEach((src,k)=>{const im=new Image();im.src=src;im.alt='Page '+(k+1)+' of the letter for '+fmt(l.date);im.loading=k<2?'eager':'lazy';box.appendChild(im);});
+  $('archive').classList.add('hide');
+  if(push!==false)history.replaceState(null,'','#'+l.date);
+  window.scrollTo(0,0);
+}
+function nearest(date){ // exact date, else closest earlier letter, else first
+  let best=-1;for(let i=0;i<L.length;i++){if(L[i].date<=date)best=i;}
+  return best<0?0:best;}
+async function init(){
+  try{
+    const r=await fetch('letters/index.json',{cache:'no-cache'});const j=await r.json();
+    L=j.letters.slice().sort((a,b)=>a.date.localeCompare(b.date));
+  }catch(e){$('msg').textContent='The letter could not be fetched. Check your connection and try again.';return;}
+  if(!L.length){$('msg').textContent='No letters have been published yet.';return;}
+  $('pick').min=L[0].date;$('pick').max=L[L.length-1].date;
+  const list=$('list');
+  L.slice().reverse().forEach(l=>{const li=document.createElement('li'),b=document.createElement('button');b.textContent=fmt(l.date);b.onclick=()=>show(L.findIndex(x=>x.date===l.date));li.appendChild(b);list.appendChild(li);});
+  const h=location.hash.slice(1);
+  show(/^\d{4}-\d{2}-\d{2}$/.test(h)?nearest(h):L.length-1,false);
+}
+$('prev').onclick=()=>show(cur-1);$('next').onclick=()=>show(cur+1);
+$('latest').onclick=()=>show(L.length-1);
+$('pick').onchange=e=>{if(e.target.value){const i=L.findIndex(x=>x.date===e.target.value);
+  if(i>=0)show(i);else{show(nearest(e.target.value));$('dbar').textContent+=' (nearest letter on or before '+fmt(e.target.value)+')';}}};
+$('arbtn').onclick=()=>{$('archive').classList.toggle('hide');$('archive').scrollIntoView({behavior:'smooth'});};
+if('serviceWorker' in navigator)navigator.serviceWorker.register('sw.js').catch(()=>{});
+init();
+</script></body></html>
