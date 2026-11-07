@@ -40,7 +40,7 @@ h2{font-variant:small-caps;font-weight:normal;text-align:center;margin:18px 0 8p
 <div style="text-align:center;margin-bottom:12px"><a class="btn" id="pdf" href="#" target="_blank" rel="noopener">Download PDF</a>
  <button id="arbtn">Archive</button></div>
 <div id="msg" class="msg">Fetching the letter&hellip;</div>
-<iframe id="rd" class="hide" title="The letter, reading view"></iframe>
+<iframe id="rd" class="hide" scrolling="no" title="The letter, reading view"></iframe>
 <div class="pages hide" id="pages"></div>
 <section id="archive" class="hide"><h2>The Archive</h2><ul class="arch" id="list"></ul></section>
 <div class="foot">Compiled from many reports. Local election results are unofficial until certified.</div>
@@ -62,7 +62,7 @@ function show(i,push){
   const fr=$('rd');
   if(useRead){
     box.classList.add('hide');fr.classList.remove('hide');
-    fr.onload=()=>{try{const d=fr.contentDocument;const f=()=>{fr.style.height=(d.documentElement.scrollHeight+4)+'px'};f();setTimeout(f,400);setTimeout(f,1500);}catch(e){fr.style.height='4000px'}};
+    fr.onload=()=>{try{const d=fr.contentDocument;const f=()=>{fr.style.height=(d.documentElement.scrollHeight+4)+'px'};f();setTimeout(f,400);setTimeout(f,1500);try{new ResizeObserver(f).observe(d.body)}catch(e){};window.addEventListener('resize',f);}catch(e){fr.style.height='4000px'}};
     fr.src=l.reader;
   }else{
     fr.classList.add('hide');fr.removeAttribute('src');box.classList.remove('hide');
