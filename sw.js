@@ -1,4 +1,4 @@
-const V='ml-v5';
+const V='ml-v6';
 self.addEventListener('install',e=>{self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))).then(()=>clients.claim()));});
 // Network first for everything (so updated letters always show); cached copy only when offline.
