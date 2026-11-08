@@ -38,7 +38,7 @@ h2{font-variant:small-caps;font-weight:normal;text-align:center;margin:18px 0 8p
 <div class="datebar" id="dbar"></div>
 <div style="text-align:center;margin-bottom:8px"><button id="mRead" class="pri">Read</button> <button id="mPages">Pages</button></div>
 <div style="text-align:center;margin-bottom:12px"><a class="btn" id="pdf" href="#" target="_blank" rel="noopener">Download PDF</a>
- <button id="arbtn">Archive</button></div>
+ <button id="arbtn">Archive</button> <a class="btn hide" id="play" href="#">Play Word Fleet</a></div>
 <div id="msg" class="msg">Fetching the letter&hellip;</div>
 <iframe id="rd" class="hide" scrolling="no" title="The letter, reading view"></iframe>
 <div class="pages hide" id="pages"></div>
@@ -52,7 +52,7 @@ function fmt(d){const [y,m,dd]=d.split('-').map(Number);return new Date(y,m-1,dd
 function show(i,push){
   if(i<0||i>=L.length)return;cur=i;const l=L[i];
   $('dbar').textContent=fmt(l.date);$('pick').value=l.date;
-  $('pdf').href=l.pdf;$('pdf').classList.remove('hide');
+  $('pdf').href=l.pdf;const pl=$('play');if(l.fleet){pl.href='fleet.html?d='+l.date;pl.classList.remove('hide')}else pl.classList.add('hide');$('pdf').classList.remove('hide');
   $('prev').disabled=i===0;$('next').disabled=i===L.length-1;
   $('latest').disabled=i===L.length-1;
   const box=$('pages');box.innerHTML='';$('msg').classList.add('hide');

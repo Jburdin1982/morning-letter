@@ -18,7 +18,8 @@
     "letters/2026-11-07/pg-11.png"
    ],
    "comic": "letters/2026-11-07/comic.png",
-   "reader": "letters/2026-11-07/reader.html"
+   "reader": "letters/2026-11-07/reader.html",
+   "fleet": "letters/2026-11-07/fleet.json"
   }
  ]
 }

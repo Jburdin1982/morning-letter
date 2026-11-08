@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-07w",
+ "size": 10,
+ "grid": [
+  "CHOGCSMIFW",
+  "WUUAACJARD",
+  "LMAKNHSWUI",
+  "SBNMDUCBGA",
+  "FLOMIKLEAI",
+  "BEENDLFFLW",
+  "EGONRCEHSD",
+  "UTRANQUILU",
+  "NDWAITWHSD",
+  "MESINCEREF"
+ ],
+ "ships": [
+  {
+   "word": "CANDID",
+   "hint": "Honest and straightforward, even when it's awkward",
+   "r": 0,
+   "c": 4,
+   "dir": "D"
+  },
+  {
+   "word": "FRUGAL",
+   "hint": "Careful with money; not wasteful",
+   "r": 0,
+   "c": 8,
+   "dir": "D"
+  },
+  {
+   "word": "HUMBLE",
+   "hint": "Not proud or boastful",
+   "r": 0,
+   "c": 1,
+   "dir": "D"
+  },
+  {
+   "word": "SINCERE",
+   "hint": "Honest and genuine in what you say and feel",
+   "r": 9,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "TRANQUIL",
+   "hint": "Calm, quiet and peaceful",
+   "r": 7,
+   "c": 1,
+   "dir": "A"
+  }
+ ]
+}

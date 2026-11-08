@@ -1,4 +1,4 @@
-const SHELL='ml-shell-v3', IMG='ml-img-v1';
+const SHELL='ml-shell-v4', IMG='ml-img-v1';
 self.addEventListener('install',e=>{e.waitUntil(caches.open(SHELL).then(c=>c.addAll(['./','index.html','manifest.json','icons/icon-192.png'])));self.skipWaiting();});
 self.addEventListener('activate',e=>{e.waitUntil(clients.claim());});
 self.addEventListener('fetch',e=>{

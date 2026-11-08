@@ -57,8 +57,9 @@ table { border-collapse: collapse; width:100%; margin: 4pt 0 8pt; break-inside: 
 .foot { text-align:center; font-size: 8.8pt; color:#6b5a3c; margin-top: 4pt; margin-bottom:0; font-style: italic; }
 .page { break-before: page; page-break-before: always; }
 .pastimes h2 { margin-top: 0; }
-.flip { transform: rotate(180deg); font-size: 8.6pt; line-height:1.25; margin-top: 10pt; text-align:left; }
+.flip { transform: rotate(180deg); font-size: 8pt; line-height:1.25; margin-top: 4pt; text-align:left; }
 .flip.box { border-top: 0.6pt solid #b99d62; padding-top:4pt; }
+ol.clues.fl { font-size:8.8pt; line-height:1.22; margin:3pt 0 3pt 1.1em; } ol.clues.fl .bl{ letter-spacing:.06em; font-family:monospace; font-size:8.5pt; }
 ol.clues { margin: 2pt 0 6pt 1.2em; padding:0; text-align:left; } ol.clues li { margin-bottom: 2pt; }
 .two { display:flex; gap: 20pt; align-items:flex-start; } .two > div { flex:1; }
 .board { text-align:center; } .board svg { width: 100%; max-width: 3.1in; height:auto; }
@@ -201,13 +202,34 @@ body.append('<p class="sign">Until tomorrow, with good wishes &mdash;<br><b>The 
 body.append('<div class="foot">Compiled from many reports. Local election results are unofficial until certified.</div>')
 
 # Pastimes
+import os, json as _json
+fleet = _json.load(open('fleet.json')) if os.path.exists('fleet.json') else None
+def fleet_svg(d):
+    n=d['size']; cs=30; lab=18; W=lab+n*cs; H=lab+n*cs
+    o=[f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;font-family:inherit">']
+    for c in range(n): o.append(f'<text x="{lab+c*cs+cs/2}" y="12" text-anchor="middle" font-size="10" fill="#8a6a35">{chr(65+c)}</text>')
+    for r in range(n):
+        o.append(f'<text x="{lab/2}" y="{lab+r*cs+cs/2+4}" text-anchor="middle" font-size="10" fill="#4a3618">{r+1}</text>')
+        for c in range(n):
+            x=lab+c*cs;y=lab+r*cs
+            o.append(f'<rect x="{x}" y="{y}" width="{cs}" height="{cs}" fill="none" stroke="#8a6a35" stroke-width="1"/><text x="{x+cs/2}" y="{y+cs/2+6}" text-anchor="middle" font-size="17" font-weight="bold" fill="#2b2118">{d["grid"][r][c]}</text>')
+    o.append('</svg>'); return ''.join(o)
 body.append('<div class="page pastimes"><h2>The Pastimes</h2>')
-body.append('<div class="two"><div><h3>I. Mate in Two</h3>'+f'<div class="board">{past["chess_svg"]}</div>'+f'<p>{past["chess_prompt"]} White is shown with the lighter, outlined pieces; the board is oriented with White at the bottom.</p></div>')
-body.append('<div><h3>II. The Four Houses</h3>'+f'<p>{past["logic_intro"]}</p><ol class="clues">'+''.join(f'<li>{c}</li>' for c in past['logic_clues'])+f'</ol><p>{past["logic_question"]}</p></div></div>')
-import os
+left='<div><h3>I. Mate in Two</h3>'+f'<div class="board">{past["chess_svg"]}</div>'+f'<p>{past["chess_prompt"]} White is shown with the lighter, outlined pieces; the board is oriented with White at the bottom.</p></div>'
+if fleet:
+    tot=sum(len(x['word']) for x in fleet['ships'])
+    clues=''.join(f'<li><span class="bl">{" ".join("_" for _ in x["word"])}</span> ({len(x["word"])}) {x["hint"]}</li>' for x in fleet['ships'])
+    right=('<div><h3>II. Word Fleet</h3>'+'<div style="width:94%">'+fleet_svg(fleet)+'</div>'+
+      f'<ol class="clues fl">{clues}</ol>'
+      f'<p class="note">Each clue is a definition. Find its word in the grid, across or down. Fire by putting a pencil dot on a letter: one dot is one shot. Check the answers below, then circle each right letter and cross out each wrong one. Your score is your number of dots. <b>Best possible score: {tot} shots.</b> My shots: ________</p></div>')
+    sol_ii='II. '+', '.join(f"{x['word']} {chr(65+x['c'])}{x['r']+1} {'across' if x['dir']=='A' else 'down'}" for x in fleet['ships'])
+else:
+    right='<div><h3>II. The Four Houses</h3>'+f'<p>{past["logic_intro"]}</p><ol class="clues">'+''.join(f'<li>{c}</li>' for c in past['logic_clues'])+f'</ol><p>{past["logic_question"]}</p></div>'
+    sol_ii='II. '+past['logic_answer']
+body.append('<div class="two">'+left+right+'</div>')
 if os.path.exists('comic/today.svg'):
-    body.append('<h3 style="margin-top:8pt">III. Sorry, Earth</h3><div class="comic" style="margin:2pt 0 4pt 0"><img src="comic/today.png" style="width:100%;display:block"></div>')
-body.append('<div class="flip box"><b>Solutions printed upside down.</b><br>I. '+past['chess_solution']+'<br>II. '+past['logic_answer']+'</div></div>')
+    body.append('<h3 style="margin-top:2pt;margin-bottom:0">III. Sorry, Earth</h3><div class="comic" style="margin:1pt 0 0 0"><img src="comic/today.png" style="width:96%;display:block;margin:0 auto"></div>')
+body.append('<div class="flip box"><b>Solutions printed upside down.</b><br>I. '+past['chess_solution']+'<br>'+sol_ii+'</div></div>')
 
 html = f'<!doctype html><html><head><meta charset="utf-8"><title>The Morning Letter</title><style>{css}</style></head><body>'+'\n'.join(body)+'</body></html>'
 open('letter.html','w').write(html)
@@ -244,7 +266,7 @@ table{border-collapse:collapse;width:100%}
 .foot{text-align:center;font-size:.8rem;color:#6b5a3c;font-style:italic;margin-top:18px}
 .two{display:block} .two>div{margin-bottom:12px}
 .board{text-align:center}.board svg{width:100%;max-width:340px;height:auto}
-ol.clues{margin:4px 0 12px 1.3em;padding:0} ol.clues li{margin-bottom:6px}
+ol.clues{margin:4px 0 12px 1.3em;padding:0} ol.clues li{margin-bottom:6px} .bl{letter-spacing:.1em;font-family:monospace}
 .comic img{width:100%;height:auto;border:1px solid #8a6a35}
 .flip{transform:rotate(180deg);font-size:.8rem;border-top:1px solid #b99d62;padding-top:6px;margin-top:20px}
 '''
