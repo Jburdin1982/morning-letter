@@ -1,0 +1,108 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Word Fleet</title><style>
+body{margin:0;background:#f7f0dd;color:#3a2a14;font-family:'Latin Modern Roman','CMU Serif',Georgia,serif;-webkit-user-select:none;user-select:none}
+.w{max-width:520px;margin:8px auto;padding:12px;border:3px double #8a6a35;min-height:calc(100vh - 24px)}
+h1{text-align:center;font-variant:small-caps;font-weight:normal;margin:4px 0;font-size:1.7rem}
+.s{text-align:center;font-style:italic;font-size:.9rem;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:22px repeat(var(--n,9),1fr);gap:3px;margin:8px 0}
+.lab{font-size:.8rem;text-align:center;align-self:center;color:#8a6a35}
+.c{aspect-ratio:1;border:1px solid #8a6a35;border-radius:5px;background:#efe5c8;font:inherit;font-size:1.25rem;font-weight:bold;color:#3a2a14;padding:0;display:flex;align-items:center;justify-content:center}
+.c.miss{background:#f7f0dd;color:#b99d62}.c.hit{background:#8a6a35;color:#f7f0dd}.c.sunk{background:#4a3618;color:#f7f0dd}
+.msg{text-align:center;min-height:1.6em;font-size:1.1rem;margin:6px 0}
+ul{list-style:none;padding:0;margin:8px 0}
+li{padding:6px 8px;border-bottom:1px dotted #b99d62;font-size:.95rem}
+li b{letter-spacing:.2em;font-family:monospace}li.done{opacity:.7}li.done .h{text-decoration:line-through}
+.btn{font:inherit;background:#8a6a35;color:#f7f0dd;border:0;border-radius:6px;padding:10px 14px;margin:4px}
+.row{text-align:center}</style></head><body><div class="w">
+<h1>Word Fleet: Vocabulary</h1><div class="s">Each clue is a definition. Find the word it describes, then tap to fire.</div>
+<div class="msg" id="m">Ready when you are.</div>
+<div class="row"><span id="shots">Shots: 0</span> &nbsp;&middot;&nbsp; <span id="sunk">Sunk: 0</span></div>
+<div class="grid" id="g"></div><ul id="f"></ul>
+<div class="row"><button class="btn" id="rv">Show answers</button><button class="btn" id="rs">Start over</button></div></div>
+<script>
+const FL={
+ "date": "2026-11-07w",
+ "size": 10,
+ "grid": [
+  "CHOGCSMIFW",
+  "WUUAACJARD",
+  "LMAKNHSWUI",
+  "SBNMDUCBGA",
+  "FLOMIKLEAI",
+  "BEENDLFFLW",
+  "EGONRCEHSD",
+  "UTRANQUILU",
+  "NDWAITWHSD",
+  "MESINCEREF"
+ ],
+ "ships": [
+  {
+   "word": "CANDID",
+   "hint": "Honest and straightforward, even when it's awkward",
+   "r": 0,
+   "c": 4,
+   "dir": "D"
+  },
+  {
+   "word": "FRUGAL",
+   "hint": "Careful with money; not wasteful",
+   "r": 0,
+   "c": 8,
+   "dir": "D"
+  },
+  {
+   "word": "HUMBLE",
+   "hint": "Not proud or boastful",
+   "r": 0,
+   "c": 1,
+   "dir": "D"
+  },
+  {
+   "word": "SINCERE",
+   "hint": "Honest and genuine in what you say and feel",
+   "r": 9,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "TRANQUIL",
+   "hint": "Calm, quiet and peaceful",
+   "r": 7,
+   "c": 1,
+   "dir": "A"
+  }
+ ]
+}
+;const N=FL.size,K='wf-'+FL.date;
+let st=(()=>{try{return JSON.parse(localStorage.getItem(K))}catch(e){return null}})()||{fired:[],rev:false};
+const grid=FL.grid.map(r=>r.split(''));const ship=[...Array(N)].map(()=>Array(N).fill(-1));
+FL.ships.forEach((s,i)=>{for(let k=0;k<s.word.length;k++){const r=s.r+(s.dir=='D'?k:0),c=s.c+(s.dir=='A'?k:0);ship[r][c]=i;}});
+const $=id=>document.getElementById(id),cells=[];
+function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+function fired(r,c){return st.fired.includes(r*N+c)}
+function sunkIdx(i){const s=FL.ships[i];for(let k=0;k<s.word.length;k++){if(!fired(s.r+(s.dir=='D'?k:0),s.c+(s.dir=='A'?k:0)))return false}return true}
+function build(){const g=$('g');g.style.setProperty('--n',N);g.innerHTML='';g.appendChild(document.createElement('div'));
+ for(let c=0;c<N;c++){const d=document.createElement('div');d.className='lab';d.textContent=String.fromCharCode(65+c);g.appendChild(d)}
+ for(let r=0;r<N;r++){const l=document.createElement('div');l.className='lab';l.textContent=r+1;g.appendChild(l);
+  for(let c=0;c<N;c++){const b=document.createElement('button');b.className='c';b.onclick=()=>fire(r,c);g.appendChild(b);cells.push(b)}}}
+function render(msg){
+ let sunk=0;
+ for(let r=0;r<N;r++)for(let c=0;c<N;c++){const b=cells[r*N+c];const f=fired(r,c),i=ship[r][c];
+  b.className='c';b.textContent='';
+  if(f&&i<0){b.className='c miss';b.textContent='·'}
+  else if(f&&i>=0){b.className='c '+(sunkIdx(i)?'sunk':'hit');b.textContent=grid[r][c]}
+  else if(st.rev&&i>=0){b.className='c hit';b.textContent=grid[r][c]}}
+ const ul=$('f');ul.innerHTML='';
+ FL.ships.forEach((s,i)=>{const d=sunkIdx(i);if(d)sunk++;const li=document.createElement('li');li.className=d?'done':'';
+  const pat=d||st.rev?s.word.split('').join(' '):s.word.split('').map((_,k)=>{const r=s.r+(s.dir=='D'?k:0),c=s.c+(s.dir=='A'?k:0);return fired(r,c)?grid[r][c]:'_'}).join(' ');
+  li.innerHTML='<b>'+pat+'</b> &nbsp;<span class="h">'+s.hint+'</span>';ul.appendChild(li)});
+ $('shots').textContent='Shots: '+st.fired.length;$('sunk').textContent='Sunk: '+sunk+' of '+FL.ships.length;
+ if(msg)$('m').textContent=msg;
+ if(sunk==FL.ships.length)$('m').textContent='Fleet sunk in '+st.fired.length+' shots. Well done!';
+}
+function fire(r,c){if(fired(r,c))return;st.fired.push(r*N+c);save();const i=ship[r][c];
+ let m='Miss.';if(i>=0){m=sunkIdx(i)?'You sank '+FL.ships[i].word+'!':'Hit!'}render(m)}
+$('rv').onclick=()=>{st.rev=!st.rev;save();render(st.rev?'Answers shown.':'Answers hidden.')};
+$('rs').onclick=()=>{st={fired:[],rev:false};save();render('Fresh start.')};
+build();render();
+</script></body></html>
