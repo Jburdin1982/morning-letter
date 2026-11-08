@@ -1,0 +1,129 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<title>Word Fleet</title><style>
+body{margin:0;background:#f7f0dd;color:#3a2a14;font-family:'Latin Modern Roman','CMU Serif',Georgia,serif;-webkit-user-select:none;user-select:none}
+.w{max-width:520px;margin:8px auto;padding:12px;border:3px double #8a6a35;min-height:calc(100vh - 24px)}
+h1{text-align:center;font-variant:small-caps;font-weight:normal;margin:4px 0;font-size:1.7rem}
+.s{text-align:center;font-style:italic;font-size:.9rem;margin-bottom:8px}
+.bar{display:flex;justify-content:space-around;font-size:1rem;margin:6px 0}
+.bar b{font-size:1.3rem}
+.msg{text-align:center;min-height:1.6em;font-size:1.05rem;margin:4px 0}
+.grid{display:grid;grid-template-columns:22px repeat(var(--n,10),1fr);gap:2px;margin:6px 0}
+.lab{font-size:.75rem;text-align:center;align-self:center;color:#8a6a35}
+.c{aspect-ratio:1;border:1px solid #8a6a35;border-radius:4px;background:#efe5c8;font:inherit;font-size:1.1rem;font-weight:bold;color:#3a2a14;padding:0;display:flex;align-items:center;justify-content:center}
+.c.sel{background:#d9b95f;border-width:2px}.c.found{background:#8a6a35;color:#f7f0dd}.c.hint{background:#e6c97a;outline:2px solid #8a6a35}.c.miss{background:#f7f0dd;color:#b99d62;text-decoration:line-through;text-decoration-thickness:2px;text-decoration-color:#a05a3c}
+ul{list-style:none;padding:0;margin:8px 0}
+li{padding:6px 8px;border-bottom:1px dotted #b99d62;font-size:.95rem}
+li b{letter-spacing:.15em;font-family:monospace}li.done{opacity:.65}li.done .h{text-decoration:line-through}
+.btn{font:inherit;background:#8a6a35;color:#f7f0dd;border:0;border-radius:6px;padding:10px 14px;margin:4px}
+.btn.alt{background:#efe5c8;color:#3a2a14;border:1px solid #8a6a35}
+.row{text-align:center}.rules{font-size:.85rem;font-style:italic;text-align:center;margin:6px 0}
+.rank{text-align:center;font-size:1.2rem;font-variant:small-caps;margin:6px 0;min-height:1.5em}
+.tiny{font-size:.8rem;text-align:center;color:#6b5a3c;margin-top:8px}
+</style></head><body><div class="w">
+<h1>Word Fleet</h1>
+<div class="s">Each clue is a definition. Tap letters to fire. Right letters stay lit, wrong ones are crossed out. Fewest shots wins.</div>
+<div class="bar"><div>Shots<br><b id="shots">0</b></div><div>Letters lit<br><b id="fnd">0/0</b></div><div>Best<br><b id="bst">-</b></div></div>
+<div class="msg" id="m">Take your first shot.</div>
+<div class="grid" id="g"></div><ul id="f"></ul>
+<div class="rank" id="rk"></div>
+<div class="row"><button class="btn alt" id="rs">Start over</button></div>
+<div class="rules">One tap is one shot. Light up every letter of every word with as few shots as you can.</div>
+<div class="tiny" id="best"></div></div>
+<script>
+const FL={
+ "date": "2026-11-07w",
+ "size": 10,
+ "grid": [
+  "CHOGCSMIFW",
+  "WUUAACJARD",
+  "LMAKNHSWUI",
+  "SBNMDUCBGA",
+  "FLOMIKLEAI",
+  "BEENDLFFLW",
+  "EGONRCEHSD",
+  "UTRANQUILU",
+  "NDWAITWHSD",
+  "MESINCEREF"
+ ],
+ "ships": [
+  {
+   "word": "CANDID",
+   "hint": "Honest and straightforward, even when it's awkward",
+   "r": 0,
+   "c": 4,
+   "dir": "D"
+  },
+  {
+   "word": "FRUGAL",
+   "hint": "Careful with money; not wasteful",
+   "r": 0,
+   "c": 8,
+   "dir": "D"
+  },
+  {
+   "word": "HUMBLE",
+   "hint": "Not proud or boastful",
+   "r": 0,
+   "c": 1,
+   "dir": "D"
+  },
+  {
+   "word": "SINCERE",
+   "hint": "Honest and genuine in what you say and feel",
+   "r": 9,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "TRANQUIL",
+   "hint": "Calm, quiet and peaceful",
+   "r": 7,
+   "c": 1,
+   "dir": "A"
+  }
+ ]
+}
+;const N=FL.size,K='wf5-'+FL.date,BK='wf5-best';
+const $=id=>document.getElementById(id);
+let st=(()=>{try{return JSON.parse(localStorage.getItem(K))}catch(e){return null}})()||{shots:0,fired:[]};
+const grid=FL.grid.map(r=>r.split(''));const cells=[];
+const own=Array.from({length:N},()=>Array(N).fill(-1));
+FL.ships.forEach((s,i)=>{for(let k=0;k<s.word.length;k++){own[s.r+(s.dir=='D'?k:0)][s.c+(s.dir=='A'?k:0)]=i}});
+const TOTAL=FL.ships.reduce((a,s)=>a+s.word.length,0);
+function save(){try{localStorage.setItem(K,JSON.stringify(st))}catch(e){}}
+function has(r,c){return st.fired.includes(r*N+c)}
+function sunk(i){const s=FL.ships[i];for(let k=0;k<s.word.length;k++){if(!has(s.r+(s.dir=='D'?k:0),s.c+(s.dir=='A'?k:0)))return false}return true}
+function getBest(){try{return JSON.parse(localStorage.getItem(BK))}catch(e){return null}}
+function build(){const g=$('g');g.style.setProperty('--n',N);g.innerHTML='';g.appendChild(document.createElement('div'));
+ for(let c=0;c<N;c++){const d=document.createElement('div');d.className='lab';d.textContent=String.fromCharCode(65+c);g.appendChild(d)}
+ for(let r=0;r<N;r++){const l=document.createElement('div');l.className='lab';l.textContent=r+1;g.appendChild(l);
+  for(let c=0;c<N;c++){const b=document.createElement('button');b.textContent=grid[r][c];b.onclick=()=>fire(r,c);g.appendChild(b);cells.push(b)}}}
+function render(msg){
+ let lit=0;
+ for(let r=0;r<N;r++)for(let c=0;c<N;c++){const b=cells[r*N+c];let cl='c';
+  if(has(r,c)){if(own[r][c]>=0){cl+=' found';lit++}else cl+=' miss'}
+  b.className=cl}
+ const ul=$('f');ul.innerHTML='';
+ FL.ships.forEach((s,i)=>{const d=sunk(i);const li=document.createElement('li');li.className=d?'done':'';
+  const pat=s.word.split('').map((ch,k)=>{const r=s.r+(s.dir=='D'?k:0),c=s.c+(s.dir=='A'?k:0);return has(r,c)?ch:'_'}).join(' ');
+  li.innerHTML='<b>'+pat+'</b> &nbsp;<span class="h">'+s.hint+'</span>';ul.appendChild(li)});
+ $('shots').textContent=st.shots;$('fnd').textContent=lit+'/'+TOTAL;
+ const b=getBest();$('bst').textContent=b&&b.best?b.best:'-';
+ if(msg)$('m').textContent=msg;
+ if(lit==TOTAL){$('m').textContent='Fleet found in '+st.shots+' shots! (Lowest possible: '+TOTAL+')';
+  let bb=getBest()||{best:999,played:0,done:{}};
+  if(!bb.done)bb.done={};
+  if(!bb.done[FL.date]){bb.done[FL.date]=st.shots;bb.best=Math.min(bb.best||999,st.shots);bb.played=(bb.played||0)+1;try{localStorage.setItem(BK,JSON.stringify(bb))}catch(e){}$('bst').textContent=bb.best}
+  $('best').textContent='Games finished: '+bb.played+'  \u00b7  Best: '+bb.best+' shots'}
+ else $('best').textContent=''}
+function fire(r,c){
+ if(has(r,c))return;
+ let lit=0;for(let i=0;i<N*N;i++){const rr=Math.floor(i/N),cc=i%N;if(has(rr,cc)&&own[rr][cc]>=0)lit++}
+ if(lit==TOTAL)return;
+ st.fired.push(r*N+c);st.shots++;save();
+ const i=own[r][c];let m='Miss.';
+ if(i>=0){m=sunk(i)?'Sunk! '+FL.ships[i].word+'.':'Hit!'}
+ render(m)}
+$('rs').onclick=()=>{st={shots:0,fired:[]};save();render('Fresh start.')};
+build();render();
+</script></body></html>
