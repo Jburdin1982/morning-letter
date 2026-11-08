@@ -47,7 +47,7 @@ h2{font-variant:small-caps;font-weight:normal;text-align:center;margin:18px 0 8p
 <div class="foot">Compiled from many reports. Local election results are unofficial until certified.</div>
 </div>
 <script>
-let L=[],cur=-1,mode=(function(){try{return localStorage.getItem('mlmode')||'read'}catch(e){return 'read'}})();
+let L=[],cur=-1,mode='read';
 const $=id=>document.getElementById(id);
 function fmt(d){const [y,m,dd]=d.split('-').map(Number);return new Date(y,m-1,dd).toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'});}
 function show(i,push){
