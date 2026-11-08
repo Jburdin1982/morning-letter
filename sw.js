@@ -1,12 +1,9 @@
-const SHELL='ml-shell-v4', IMG='ml-img-v1';
-self.addEventListener('install',e=>{e.waitUntil(caches.open(SHELL).then(c=>c.addAll(['./','index.html','manifest.json','icons/icon-192.png'])));self.skipWaiting();});
-self.addEventListener('activate',e=>{e.waitUntil(clients.claim());});
+const V='ml-v5';
+self.addEventListener('install',e=>{self.skipWaiting();});
+self.addEventListener('activate',e=>{e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==V).map(k=>caches.delete(k)))).then(()=>clients.claim()));});
+// Network first for everything (so updated letters always show); cached copy only when offline.
 self.addEventListener('fetch',e=>{
   const u=new URL(e.request.url);
   if(u.origin!==location.origin||e.request.method!=='GET')return;
-  if(u.pathname.endsWith('index.json')){ // always try fresh, fall back to cache
-    e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(SHELL).then(x=>x.put(e.request,c));return r;}).catch(()=>caches.match(e.request)));return;}
-  if(u.pathname.includes('/letters/')){ // letters never change: cache first
-    e.respondWith(caches.match(e.request).then(h=>h||fetch(e.request).then(r=>{const c=r.clone();caches.open(IMG).then(x=>x.put(e.request,c));return r;})));return;}
-  e.respondWith(fetch(e.request).then(r=>{const c=r.clone();caches.open(SHELL).then(x=>x.put(e.request,c));return r;}).catch(()=>caches.match(e.request)));
+  e.respondWith(fetch(e.request,{cache:'no-cache'}).then(r=>{if(r.ok){const c=r.clone();caches.open(V).then(x=>x.put(e.request,c));}return r;}).catch(()=>caches.match(e.request)));
 });
