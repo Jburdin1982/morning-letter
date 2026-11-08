@@ -1,25 +1,42 @@
 {
- "letters": [
-  {
-   "date": "2026-11-07",
-   "pdf": "letters/2026-11-07/letter.pdf",
-   "pages": 11,
-   "page_images": [
-    "letters/2026-11-07/pg-01.png",
-    "letters/2026-11-07/pg-02.png",
-    "letters/2026-11-07/pg-03.png",
-    "letters/2026-11-07/pg-04.png",
-    "letters/2026-11-07/pg-05.png",
-    "letters/2026-11-07/pg-06.png",
-    "letters/2026-11-07/pg-07.png",
-    "letters/2026-11-07/pg-08.png",
-    "letters/2026-11-07/pg-09.png",
-    "letters/2026-11-07/pg-10.png",
-    "letters/2026-11-07/pg-11.png"
-   ],
-   "comic": "letters/2026-11-07/comic.png",
-   "reader": "letters/2026-11-07/reader.html",
-   "fleet": "letters/2026-11-07/fleet.json"
-  }
- ]
+  "letters": [
+    {
+      "date": "2026-11-07",
+      "pdf": "letters/2026-11-07/letter.pdf",
+      "pages": 11,
+      "page_images": [
+        "letters/2026-11-07/pg-01.png",
+        "letters/2026-11-07/pg-02.png",
+        "letters/2026-11-07/pg-03.png",
+        "letters/2026-11-07/pg-04.png",
+        "letters/2026-11-07/pg-05.png",
+        "letters/2026-11-07/pg-06.png",
+        "letters/2026-11-07/pg-07.png",
+        "letters/2026-11-07/pg-08.png",
+        "letters/2026-11-07/pg-09.png",
+        "letters/2026-11-07/pg-10.png",
+        "letters/2026-11-07/pg-11.png"
+      ],
+      "comic": "letters/2026-11-07/comic.png",
+      "reader": "letters/2026-11-07/reader.html",
+      "fleet": "letters/2026-11-07/fleet.json"
+    },
+    {
+      "date": "2026-11-08",
+      "pdf": "letters/2026-11-08/letter.pdf",
+      "pages": 10,
+      "page_images": [
+        "letters/2026-11-08/pg-01.png",
+        "letters/2026-11-08/pg-02.png",
+        "letters/2026-11-08/pg-03.png",
+        "letters/2026-11-08/pg-04.png",
+        "letters/2026-11-08/pg-05.png",
+        "letters/2026-11-08/pg-06.png",
+        "letters/2026-11-08/pg-07.png",
+        "letters/2026-11-08/pg-08.png",
+        "letters/2026-11-08/pg-09.png",
+        "letters/2026-11-08/pg-10.png"
+      ]
+    }
+  ]
 }
