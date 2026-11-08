@@ -66,7 +66,7 @@ ol.clues { margin: 2pt 0 6pt 1.2em; padding:0; text-align:left; } ol.clues li { 
 '''
 def P(t): return "".join(f"<p>{x.strip()}</p>" for x in t.split("||"))
 body = []
-body.append('<h1>The Morning Letter</h1><div class="sub">A daily word from the Household Gazette to Jonesboro, Brookland &amp; neighbors</div>')
+body.append('<h1>The Morning Letter</h1><div class="sub">With the compliments of the Editor, to Jonesboro, Brookland &amp; neighbors</div>')
 body.append('<div class="date">Saturday, the Seventh of November, 2026</div><div class="orn">&#10086;</div>')
 body.append(P('Good morning,'))
 body.append(P("A grey, mild Saturday is on offer, with Arkansas State at home this afternoon and the whole country still sorting out the week's election. Here is the news, set down as plainly as we can manage it."))
