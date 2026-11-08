@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-08",
+ "size": 10,
+ "grid": [
+  "PBMGNBSNST",
+  "SGDILIGENT",
+  "OCPMPTSAGU",
+  "LNJGVGASFF",
+  "ESJKINDDET",
+  "MHSRVMAORD",
+  "NSAWIOPGTT",
+  "LSCPDGNMIF",
+  "STHFHOBULT",
+  "HARMONYPEN"
+ ],
+ "ships": [
+  {
+   "word": "DILIGENT",
+   "hint": "Careful and hardworking in what one does",
+   "r": 1,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "FERTILE",
+   "hint": "Rich enough to grow crops or plants well",
+   "r": 3,
+   "c": 8,
+   "dir": "D"
+  },
+  {
+   "word": "HARMONY",
+   "hint": "Pleasant agreement, or notes that sound good together",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "SOLEMN",
+   "hint": "Serious and dignified, not joking",
+   "r": 1,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "VIVID",
+   "hint": "Strikingly bright, clear and full of life",
+   "r": 3,
+   "c": 4,
+   "dir": "D"
+  }
+ ]
+}

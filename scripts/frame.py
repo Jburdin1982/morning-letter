@@ -14,7 +14,6 @@ def bg(path):
     c.save()
 bg('/tmp/bg.pdf')
 for pg in r.pages:
-    b = PdfReader('/tmp/bg.pdf').pages[0]
+    b = w.add_page(PdfReader('/tmp/bg.pdf').pages[0])
     b.merge_page(pg)
-    w.add_page(b)
 w.write(out)
