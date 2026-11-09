@@ -40,6 +40,24 @@
       "comic": "letters/2026-11-08/comic.png",
       "reader": "letters/2026-11-08/reader.html",
       "fleet": "letters/2026-11-08/fleet.json"
+    },
+    {
+      "date": "2026-11-09",
+      "pdf": "letters/2026-11-09/letter.pdf",
+      "pages": 8,
+      "page_images": [
+        "letters/2026-11-09/pg-01.png",
+        "letters/2026-11-09/pg-02.png",
+        "letters/2026-11-09/pg-03.png",
+        "letters/2026-11-09/pg-04.png",
+        "letters/2026-11-09/pg-05.png",
+        "letters/2026-11-09/pg-06.png",
+        "letters/2026-11-09/pg-07.png",
+        "letters/2026-11-09/pg-08.png"
+      ],
+      "comic": "letters/2026-11-09/comic.png",
+      "reader": "letters/2026-11-09/reader.html",
+      "fleet": "letters/2026-11-09/fleet.json"
     }
   ]
 }

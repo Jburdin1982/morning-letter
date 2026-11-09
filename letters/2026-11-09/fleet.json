@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-09",
+ "size": 10,
+ "grid": [
+  "BECAUTIOUS",
+  "RAEKNABJHA",
+  "IPMMMEJSOB",
+  "SAOMGIFPME",
+  "KPDKTGOAWH",
+  "KBELUIHRTJ",
+  "ENSDWNRSGP",
+  "OUTMCFAEKC",
+  "CTUHESMILM",
+  "TJGRACIOUS"
+ ],
+ "ships": [
+  {
+   "word": "BRISK",
+   "hint": "Quick, lively and energetic",
+   "r": 0,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "CAUTIOUS",
+   "hint": "Careful to avoid danger or mistakes",
+   "r": 0,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "GRACIOUS",
+   "hint": "Kind, polite and generous in manner",
+   "r": 9,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "MODEST",
+   "hint": "Not showing off; moderate in size or amount",
+   "r": 2,
+   "c": 2,
+   "dir": "D"
+  },
+  {
+   "word": "SPARSE",
+   "hint": "Thinly scattered; not dense",
+   "r": 2,
+   "c": 7,
+   "dir": "D"
+  }
+ ]
+}
