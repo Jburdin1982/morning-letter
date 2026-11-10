@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-10",
+ "size": 10,
+ "grid": [
+  "ENOWEBNNRS",
+  "ORSEOHIWIT",
+  "EAIATSMLNU",
+  "HUBRDABGMR",
+  "NTSYHMLNCD",
+  "WJCPOPEWOY",
+  "PUCOSFLPJB",
+  "LGENUINEUA",
+  "WRGKPSTCWS",
+  "RESILIENTN"
+ ],
+ "ships": [
+  {
+   "word": "GENUINE",
+   "hint": "Real and honest, not fake",
+   "r": 7,
+   "c": 1,
+   "dir": "A"
+  },
+  {
+   "word": "NIMBLE",
+   "hint": "Quick and light in movement",
+   "r": 0,
+   "c": 6,
+   "dir": "D"
+  },
+  {
+   "word": "RESILIENT",
+   "hint": "Able to recover quickly after trouble or hardship",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "STURDY",
+   "hint": "Strongly built and not easily broken",
+   "r": 0,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "WEARY",
+   "hint": "Tired out, drained of energy",
+   "r": 0,
+   "c": 3,
+   "dir": "D"
+  }
+ ]
+}
