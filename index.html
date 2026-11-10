@@ -39,6 +39,7 @@ h2{font-variant:small-caps;font-weight:normal;text-align:center;margin:18px 0 8p
 <div class="datebar" id="dbar"></div>
 <div style="display:none"><button id="mRead" class="pri">Read</button> <button id="mPages">Pages</button></div>
 <div style="text-align:center;margin-bottom:12px"><a class="btn" id="pdf" href="#" target="_blank" rel="noopener">Download PDF</a>
+ <a class="btn pri" id="play" href="#">Play Word Fleet</a>
  <button id="arbtn">Archive</button></div>
 <div id="msg" class="msg">Fetching the letter&hellip;</div>
 <iframe id="rd" class="hide" scrolling="no" title="The letter, reading view"></iframe>
@@ -54,6 +55,7 @@ function show(i,push){
   if(i<0||i>=L.length)return;cur=i;const l=L[i];
   $('dbar').textContent=fmt(l.date);$('pick').value=l.date;
   $('pdf').href=l.pdf;$('pdf').classList.remove('hide');
+  $('play').href='fleet.html?d='+l.date;$('play').classList.toggle('hide',!l.fleet);
   $('prev').disabled=i===0;$('next').disabled=i===L.length-1;
   $('latest').disabled=i===L.length-1;
   const box=$('pages');box.innerHTML='';$('msg').classList.add('hide');
