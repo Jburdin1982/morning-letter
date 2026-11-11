@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-11",
+ "size": 10,
+ "grid": [
+  "KFTJPSPKBE",
+  "AGRATEFULF",
+  "GWFAMDICDS",
+  "LTORDVLCOG",
+  "OFAAIANFTE",
+  "YNGMALWCJN",
+  "AWFFPOEWNT",
+  "LCHHHRDLSL",
+  "SCPWKDDTME",
+  "PATIENTOLI"
+ ],
+ "ships": [
+  {
+   "word": "GENTLE",
+   "hint": "Mild and kind in manner; not rough or harsh",
+   "r": 3,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "GRATEFUL",
+   "hint": "Feeling or showing thanks for a kindness or gift",
+   "r": 1,
+   "c": 1,
+   "dir": "A"
+  },
+  {
+   "word": "LOYAL",
+   "hint": "Faithful to a person, country or cause",
+   "r": 3,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "PATIENT",
+   "hint": "Able to wait or put up with trouble calmly, without complaint",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "VALOR",
+   "hint": "Great courage in the face of danger, especially in battle",
+   "r": 3,
+   "c": 5,
+   "dir": "D"
+  }
+ ]
+}
