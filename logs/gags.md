@@ -4,3 +4,4 @@
 - 2026-11-09: The shovel (Grog sits in the hole as a seat; "Use responsibly." / "He won't.").
 - 2026-11-10: The map (Grog uses it as a tablecloth/placemat under his roast; "It's a placemat.").
 - 2026-11-11: The calendar (Grog writes GROG on every day; "Rewind." / Bonk turns the dial the wrong way to winter; Grog: "Grog day chilly!").
+- 2026-11-12: Fire (Grog uses it for smoke-signal autograph 'GROG' in the sky, burns all the wood; Glim: "At least everyone knows who's cold.").

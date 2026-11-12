@@ -44,10 +44,18 @@ def main():
            "weather": None, "deer": None, "fish": None}
     rf, phase = rut_phase(date)
     try:
-        u = ("https://api.open-meteo.com/v1/forecast?latitude=%s&longitude=%s&timezone=America/Chicago"
+        q = ("/v1/forecast?latitude=%s&longitude=%s&timezone=America/Chicago"
              "&temperature_unit=fahrenheit&wind_speed_unit=mph&forecast_days=3&past_days=1"
              "&hourly=temperature_2m,pressure_msl,wind_speed_10m,cloud_cover,precipitation_probability" % (LAT, LON))
-        h = get(u)["hourly"]
+        h = None; err = None
+        # api.open-meteo.com is primary; previous-runs-api serves the same model data when the main host
+        # is rate-limited or resets the connection.
+        for host in ("https://api.open-meteo.com", "https://previous-runs-api.open-meteo.com"):
+            try:
+                h = get(host + q)["hourly"]; break
+            except Exception as e:
+                err = e
+        if h is None: raise err
     except Exception as e:
         out["error"] = "weather unavailable: %s" % e
         out["deer"] = {"rating": None, "rut_phase": phase}

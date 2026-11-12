@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-12",
+ "size": 10,
+ "grid": [
+  "AEAWSSRIBR",
+  "DAAAECLMGU",
+  "EBWRRLSFWS",
+  "PEPJEAFWAT",
+  "TPHSNHBPPI",
+  "OCFBEHTDJC",
+  "HNWHEBTTFK",
+  "NLUPRUDENT",
+  "CHCOAPOCMA",
+  "KCHEERFULB"
+ ],
+ "ships": [
+  {
+   "word": "ADEPT",
+   "hint": "Very skilled at doing something",
+   "r": 0,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "CHEERFUL",
+   "hint": "Noticeably happy and full of good spirits",
+   "r": 9,
+   "c": 1,
+   "dir": "A"
+  },
+  {
+   "word": "PRUDENT",
+   "hint": "Careful and sensible about the future",
+   "r": 7,
+   "c": 3,
+   "dir": "A"
+  },
+  {
+   "word": "RUSTIC",
+   "hint": "Plain and simple in a country way",
+   "r": 0,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "SERENE",
+   "hint": "Calm, peaceful and untroubled",
+   "r": 0,
+   "c": 4,
+   "dir": "D"
+  }
+ ]
+}
