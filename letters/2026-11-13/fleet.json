@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-13",
+ "size": 10,
+ "grid": [
+  "FEABUNDANT",
+  "THRJDLMIDA",
+  "IDNCUSKSTM",
+  "MFFKMHHPAE",
+  "IKNCDRTUBL",
+  "DOMHSEOIIL",
+  "TSLOJWLDPO",
+  "LWGCPDMSGW",
+  "CJFUMASSHD",
+  "PEVIGILANT"
+ ],
+ "ships": [
+  {
+   "word": "ABUNDANT",
+   "hint": "Present in large amounts; more than enough",
+   "r": 0,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "MELLOW",
+   "hint": "Soft, rich and gentle, as fruit or wine grows with age",
+   "r": 2,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "SHREWD",
+   "hint": "Sharp and clever at judging people or situations",
+   "r": 2,
+   "c": 5,
+   "dir": "D"
+  },
+  {
+   "word": "TIMID",
+   "hint": "Shy and easily frightened; short on courage",
+   "r": 1,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "VIGILANT",
+   "hint": "Keeping careful watch for danger or trouble",
+   "r": 9,
+   "c": 2,
+   "dir": "A"
+  }
+ ]
+}
