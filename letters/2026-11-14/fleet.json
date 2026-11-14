@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-14",
+ "size": 10,
+ "grid": [
+  "GENEROUSJB",
+  "KDSEAJNJKH",
+  "KRERPFKEHA",
+  "NOPDHEBWPU",
+  "EBBSBBHIKG",
+  "FUUJRILTRH",
+  "HSATCJETBT",
+  "JTFCKLRYLY",
+  "IWKIEEAWCD",
+  "USTUBBORNH"
+ ],
+ "ships": [
+  {
+   "word": "GENEROUS",
+   "hint": "Ready to give more of your money, time or help than is expected",
+   "r": 0,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "HAUGHTY",
+   "hint": "Proud in a cold, superior way; looking down on others",
+   "r": 1,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "ROBUST",
+   "hint": "Strong and healthy; built to hold up under hard use",
+   "r": 2,
+   "c": 1,
+   "dir": "D"
+  },
+  {
+   "word": "STUBBORN",
+   "hint": "Unwilling to change your mind or give way, even when you should",
+   "r": 9,
+   "c": 1,
+   "dir": "A"
+  },
+  {
+   "word": "WITTY",
+   "hint": "Quick and clever with words in an amusing way",
+   "r": 3,
+   "c": 7,
+   "dir": "D"
+  }
+ ]
+}
