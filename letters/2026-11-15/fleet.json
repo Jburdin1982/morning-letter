@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-15",
+ "size": 10,
+ "grid": [
+  "SEFHHSJIPU",
+  "HECDOTOCEE",
+  "AKRLBEUCAA",
+  "FEIEBAMCGG",
+  "NISHTDNFOE",
+  "LWPHEYDRWR",
+  "TTDPOPDMCT",
+  "UTHOROUGHE",
+  "TUWKNNMEFO",
+  "JIANCIENTD"
+ ],
+ "ships": [
+  {
+   "word": "ANCIENT",
+   "hint": "Very old; belonging to the distant past",
+   "r": 9,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "CRISP",
+   "hint": "Firm and dry, breaking with a snap; also, cool and fresh, like autumn air",
+   "r": 1,
+   "c": 2,
+   "dir": "D"
+  },
+  {
+   "word": "EAGER",
+   "hint": "Wanting very much to do or have something",
+   "r": 1,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "STEADY",
+   "hint": "Firm and not shaking; also, regular and unchanging",
+   "r": 0,
+   "c": 5,
+   "dir": "D"
+  },
+  {
+   "word": "THOROUGH",
+   "hint": "Done carefully and completely, with attention to every detail",
+   "r": 7,
+   "c": 1,
+   "dir": "A"
+  }
+ ]
+}

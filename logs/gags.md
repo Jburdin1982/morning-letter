@@ -7,3 +7,4 @@
 - 2026-11-12: Fire (Grog uses it for smoke-signal autograph 'GROG' in the sky, burns all the wood; Glim: "At least everyone knows who's cold.").
 - 2026-11-13: The mirror (for signaling distant tribes; Grog falls for "handsome man in shiny rock", says goodnight to him; Bonk: "He did find someone.").
 - 2026-11-14: Soap (Grog blows bubbles, "GROG MAKE TINY MOONS!", stays muddy; Bonk: "He's still muddy." / Glim: "Hygiene: zero. Joy: off the charts.").
+- 2026-11-15: The ladder ("Reach higher. See farther."; Grog climbs a tree, kicks the ladder away, "GROG KING OF TREE!"; that night stuck; Bonk: "Should we...?" / Glim: "No contact." / Grog: "King... forever.").
