@@ -8,3 +8,4 @@
 - 2026-11-13: The mirror (for signaling distant tribes; Grog falls for "handsome man in shiny rock", says goodnight to him; Bonk: "He did find someone.").
 - 2026-11-14: Soap (Grog blows bubbles, "GROG MAKE TINY MOONS!", stays muddy; Bonk: "He's still muddy." / Glim: "Hygiene: zero. Joy: off the charts.").
 - 2026-11-15: The ladder ("Reach higher. See farther."; Grog climbs a tree, kicks the ladder away, "GROG KING OF TREE!"; that night stuck; Bonk: "Should we...?" / Glim: "No contact." / Grog: "King... forever.").
+- 2026-11-16: The compass ("He'll never be lost again."; Grog follows the arrow north for three days into snow; Glim: "It only points north." / Bonk: "How far north is north?"; Grog: "GROG NOT LOST. GROG COLD."; Bonk: "Well... it did work.").

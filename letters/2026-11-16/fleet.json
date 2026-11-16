@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-16",
+ "size": 10,
+ "grid": [
+  "FRAGRANTCG",
+  "DERMJKKTGC",
+  "WUACURIOUS",
+  "KFBFKMUMUW",
+  "KHIIHIMPSS",
+  "MFAOEKDLUG",
+  "OGMPAUOULC",
+  "SGPGROATLG",
+  "JILITMRIED",
+  "NJEPYESANU"
+ ],
+ "ships": [
+  {
+   "word": "AMPLE",
+   "hint": "More than enough; plenty",
+   "r": 5,
+   "c": 2,
+   "dir": "D"
+  },
+  {
+   "word": "CURIOUS",
+   "hint": "Eager to know or learn about something",
+   "r": 2,
+   "c": 3,
+   "dir": "A"
+  },
+  {
+   "word": "FRAGRANT",
+   "hint": "Having a sweet or pleasant smell",
+   "r": 0,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "HEARTY",
+   "hint": "Large and filling, as a meal; also warm and enthusiastic",
+   "r": 4,
+   "c": 4,
+   "dir": "D"
+  },
+  {
+   "word": "SULLEN",
+   "hint": "Gloomy and silently bad-tempered",
+   "r": 4,
+   "c": 8,
+   "dir": "D"
+  }
+ ]
+}
