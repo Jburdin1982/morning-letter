@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-17",
+ "size": 10,
+ "grid": [
+  "FIHARVESTI",
+  "AIEUMDKBHE",
+  "MAJESTICMF",
+  "PCJWELGMBP",
+  "SJFTIBLLCM",
+  "AMACTNFOLO",
+  "VMTRHLROUH",
+  "OTRPGLABMF",
+  "ROHAJUITSF",
+  "YMUSFBLEYL"
+ ],
+ "ships": [
+  {
+   "word": "CLUMSY",
+   "hint": "Awkward in movement; apt to drop or bump into things",
+   "r": 4,
+   "c": 8,
+   "dir": "D"
+  },
+  {
+   "word": "FRAIL",
+   "hint": "Weak and delicate; easily broken or hurt",
+   "r": 5,
+   "c": 6,
+   "dir": "D"
+  },
+  {
+   "word": "HARVEST",
+   "hint": "The gathering in of ripe crops, or the season when it is done",
+   "r": 0,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "MAJESTIC",
+   "hint": "Grand and impressive in beauty or dignity, like a mountain or a king",
+   "r": 2,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "SAVORY",
+   "hint": "Salty or spicy rather than sweet; pleasing to the taste",
+   "r": 4,
+   "c": 0,
+   "dir": "D"
+  }
+ ]
+}
