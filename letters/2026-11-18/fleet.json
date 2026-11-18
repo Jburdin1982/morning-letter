@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-18",
+ "size": 10,
+ "grid": [
+  "NSPWSTOSMW",
+  "OMORHBAIWU",
+  "BHNJATEUBD",
+  "LADPBBJDKE",
+  "ESEIBKIIOI",
+  "JIRSYIMOAH",
+  "ONCOLKSCJI",
+  "HFAITHFULB",
+  "BFBEJARKOJ",
+  "MEANDERWJL"
+ ],
+ "ships": [
+  {
+   "word": "FAITHFUL",
+   "hint": "Steadily loyal and true to a person, promise or duty",
+   "r": 7,
+   "c": 1,
+   "dir": "A"
+  },
+  {
+   "word": "MEANDER",
+   "hint": "To wander slowly along a winding course, like a lazy river",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "NOBLE",
+   "hint": "Having fine personal qualities, such as honor and generosity",
+   "r": 0,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "PONDER",
+   "hint": "To think something over carefully and at length",
+   "r": 0,
+   "c": 2,
+   "dir": "D"
+  },
+  {
+   "word": "SHABBY",
+   "hint": "Worn out and run-down from long use",
+   "r": 0,
+   "c": 4,
+   "dir": "D"
+  }
+ ]
+}
