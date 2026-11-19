@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-19",
+ "size": 10,
+ "grid": [
+  "SOBRSNMJKO",
+  "DALLOBPCJB",
+  "MLEEMRAFSF",
+  "ROABBOUKRI",
+  "BIKHECLRIC",
+  "JRKDRFAWPK",
+  "NUTEJSBGHL",
+  "VIGOROUSSE",
+  "AIWBJEBKWC",
+  "RWCORDIALH"
+ ],
+ "ships": [
+  {
+   "word": "BLEAK",
+   "hint": "Cold, bare and offering little hope or comfort",
+   "r": 0,
+   "c": 2,
+   "dir": "D"
+  },
+  {
+   "word": "CORDIAL",
+   "hint": "Warm and friendly in a polite way",
+   "r": 9,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "FICKLE",
+   "hint": "Apt to change one's mind or loyalties often",
+   "r": 2,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "SOMBER",
+   "hint": "Dark and serious in mood or color",
+   "r": 0,
+   "c": 4,
+   "dir": "D"
+  },
+  {
+   "word": "VIGOROUS",
+   "hint": "Strong, active and full of energy",
+   "r": 7,
+   "c": 0,
+   "dir": "A"
+  }
+ ]
+}

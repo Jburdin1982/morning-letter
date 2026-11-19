@@ -11,3 +11,4 @@
 - 2026-11-16: The compass ("He'll never be lost again."; Grog follows the arrow north for three days into snow; Glim: "It only points north." / Bonk: "How far north is north?"; Grog: "GROG NOT LOST. GROG COLD."; Bonk: "Well... it did work.").
 - 2026-11-17: The clay pot ("Store grain for winter."; Grog thumps it, "POT GO BOOM!", drums all night; Glim: "It's for grain." / Bonk: "But listen to that beat!"; winter: "Grain stored: zero." / Grog: "GROG NOT EAT. GROG DANCE TO STAY WARM!").
 - 2026-11-18: The plow ("Till the soil. Grow food."); Grog rides it down a hill as a sled, "WHEEEE! GROG SLED!"; in spring the sled tracks sprout; Bonk: "His sled tracks... sprouted!"; Grog: "GROG INVENT FARMING!" / Glim: "Technically... a success.").
+- 2026-11-19: The umbrella ("It keeps you dry."); Grog uses it upside down as a berry bowl in the dry week; Sunday rain fills it, Glim: "He's soaked. Use it, Grog..."; Grog: "GROG MAKE BERRY SOUP!"; Bonk: "A gift for all weather!".
