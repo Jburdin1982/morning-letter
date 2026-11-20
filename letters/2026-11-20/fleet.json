@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-20",
+ "size": 10,
+ "grid": [
+  "LRADIANTFK",
+  "SKIDSIPJCD",
+  "UNSFCARIDL",
+  "EJFEPGASIA",
+  "LRREFIILDV",
+  "RDBBCLJDDI",
+  "RCOLGEIOLS",
+  "OAGETNWSMH",
+  "CWEIJOTIEW",
+  "HESITANTEI"
+ ],
+ "ships": [
+  {
+   "word": "AGILE",
+   "hint": "Able to move quickly and easily",
+   "r": 2,
+   "c": 5,
+   "dir": "D"
+  },
+  {
+   "word": "FEEBLE",
+   "hint": "Lacking strength; very weak",
+   "r": 2,
+   "c": 3,
+   "dir": "D"
+  },
+  {
+   "word": "HESITANT",
+   "hint": "Slow to act or speak because of doubt or uncertainty",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "LAVISH",
+   "hint": "Very rich, costly or more than generous",
+   "r": 2,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "RADIANT",
+   "hint": "Shining brightly, or glowing with joy or good health",
+   "r": 0,
+   "c": 1,
+   "dir": "A"
+  }
+ ]
+}
