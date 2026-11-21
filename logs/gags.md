@@ -13,3 +13,4 @@
 - 2026-11-18: The plow ("Till the soil. Grow food."); Grog rides it down a hill as a sled, "WHEEEE! GROG SLED!"; in spring the sled tracks sprout; Bonk: "His sled tracks... sprouted!"; Grog: "GROG INVENT FARMING!" / Glim: "Technically... a success.").
 - 2026-11-19: The umbrella ("It keeps you dry."); Grog uses it upside down as a berry bowl in the dry week; Sunday rain fills it, Glim: "He's soaked. Use it, Grog..."; Grog: "GROG MAKE BERRY SOUP!"; Bonk: "A gift for all weather!".
 - 2026-11-20: The fishing net ("A hundred fish at once."); Grog strings it between two trees as a hammock, "AHHH. GROG CATCH NAP."; Bonk: "Fish caught: zero." / Glim: "But he did invent the weekend.".
+- 2026-11-21: The candle ("Light for the long nights."); Grog sticks it on a mud cake, "GROG KNOW! MUD CAKE!", makes a wish and blows it out ("PFFFT!"); total darkness, only eyes: Bonk: "It went out." / Grog: "GROG WISH FOR LIGHT!".

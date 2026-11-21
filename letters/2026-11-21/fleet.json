@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-21",
+ "size": 10,
+ "grid": [
+  "MADSUHBFOI",
+  "EMDECISIVE",
+  "ADRBFJIBCN",
+  "GOAWWKSHTL",
+  "EICUPTADUE",
+  "RERPBRVDHL",
+  "MIFTEUVRWA",
+  "UGFWFGYLCT",
+  "SRJIMJDSNE",
+  "FESTIVECED"
+ ],
+ "ships": [
+  {
+   "word": "DECISIVE",
+   "hint": "Able to make up one\u2019s mind quickly and firmly",
+   "r": 1,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "ELATED",
+   "hint": "Overjoyed; in very high spirits",
+   "r": 4,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "FESTIVE",
+   "hint": "Cheerful and merry, fit for a holiday or celebration",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "MEAGER",
+   "hint": "Too small in amount; barely enough",
+   "r": 0,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "SAVVY",
+   "hint": "Shrewd and practical; knowing how things work",
+   "r": 3,
+   "c": 6,
+   "dir": "D"
+  }
+ ]
+}
