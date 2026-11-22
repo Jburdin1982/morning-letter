@@ -14,3 +14,4 @@
 - 2026-11-19: The umbrella ("It keeps you dry."); Grog uses it upside down as a berry bowl in the dry week; Sunday rain fills it, Glim: "He's soaked. Use it, Grog..."; Grog: "GROG MAKE BERRY SOUP!"; Bonk: "A gift for all weather!".
 - 2026-11-20: The fishing net ("A hundred fish at once."); Grog strings it between two trees as a hammock, "AHHH. GROG CATCH NAP."; Bonk: "Fish caught: zero." / Glim: "But he did invent the weekend.".
 - 2026-11-21: The candle ("Light for the long nights."); Grog sticks it on a mud cake, "GROG KNOW! MUD CAKE!", makes a wish and blows it out ("PFFFT!"); total darkness, only eyes: Bonk: "It went out." / Grog: "GROG WISH FOR LIGHT!".
+- 2026-11-22: Writing ("Knowledge for the ages!"); Grog carves a stone tablet: "GROG FEAST: MEAT MEAT PIE MORE MEAT"; Glim: "The first written words... are a feast list."; Bonk: "Well, knowledge was saved." / Grog: "GROG NEVER FORGET PIE!".

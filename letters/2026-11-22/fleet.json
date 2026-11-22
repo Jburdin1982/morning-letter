@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-22",
+ "size": 10,
+ "grid": [
+  "TUDELHDIDG",
+  "ETUSGWOUFK",
+  "PBOKOJCCEF",
+  "IFLIPDIFAR",
+  "DRANATLOSA",
+  "UGUOWOEPTO",
+  "RRRWMDGFHW",
+  "THANKFULML",
+  "IRWRWHJMLM",
+  "SCHERISHIJ"
+ ],
+ "ships": [
+  {
+   "word": "CHERISH",
+   "hint": "To hold dear and care for tenderly",
+   "r": 9,
+   "c": 1,
+   "dir": "A"
+  },
+  {
+   "word": "DOCILE",
+   "hint": "Quiet, gentle and easy to manage or teach",
+   "r": 0,
+   "c": 6,
+   "dir": "D"
+  },
+  {
+   "word": "FEAST",
+   "hint": "A large, special meal shared by many people",
+   "r": 1,
+   "c": 8,
+   "dir": "D"
+  },
+  {
+   "word": "TEPID",
+   "hint": "Only slightly warm; lukewarm",
+   "r": 0,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "THANKFUL",
+   "hint": "Glad and grateful for what one has been given",
+   "r": 7,
+   "c": 0,
+   "dir": "A"
+  }
+ ]
+}
