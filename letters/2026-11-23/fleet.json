@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-23",
+ "size": 10,
+ "grid": [
+  "CBCOMPOSED",
+  "HGCMKRATTD",
+  "GBWELOMKOH",
+  "LOSSIJINNA",
+  "OLFENJRJSC",
+  "ODNJGCTBKL",
+  "MPNDENHSTN",
+  "YKPURHRJFC",
+  "TFGBIFKWJB",
+  "NOURISHDLE"
+ ],
+ "ships": [
+  {
+   "word": "COMPOSED",
+   "hint": "Calm and in control of your feelings",
+   "r": 0,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "GLOOMY",
+   "hint": "Dark and dim; also sad and low in spirits",
+   "r": 2,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "LINGER",
+   "hint": "To stay on longer than needed; slow to leave",
+   "r": 2,
+   "c": 4,
+   "dir": "D"
+  },
+  {
+   "word": "MIRTH",
+   "hint": "Laughter and good cheer",
+   "r": 2,
+   "c": 6,
+   "dir": "D"
+  },
+  {
+   "word": "NOURISH",
+   "hint": "To feed and help to grow strong and healthy",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  }
+ ]
+}

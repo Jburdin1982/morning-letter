@@ -15,3 +15,4 @@
 - 2026-11-20: The fishing net ("A hundred fish at once."); Grog strings it between two trees as a hammock, "AHHH. GROG CATCH NAP."; Bonk: "Fish caught: zero." / Glim: "But he did invent the weekend.".
 - 2026-11-21: The candle ("Light for the long nights."); Grog sticks it on a mud cake, "GROG KNOW! MUD CAKE!", makes a wish and blows it out ("PFFFT!"); total darkness, only eyes: Bonk: "It went out." / Grog: "GROG WISH FOR LIGHT!".
 - 2026-11-22: Writing ("Knowledge for the ages!"); Grog carves a stone tablet: "GROG FEAST: MEAT MEAT PIE MORE MEAT"; Glim: "The first written words... are a feast list."; Bonk: "Well, knowledge was saved." / Grog: "GROG NEVER FORGET PIE!".
+- 2026-11-23: Needle and thread ("Sew warm clothes for winter."); Grog sews himself into his sleeping fur, "GROG SEW FUR SHUT. GROG SNUG!"; next morning stuck, "GROG MUST... HOP."; Glim: "He sewed himself in." / Grog: "GROG INVENT SACK RACE!" / Bonk: "Well... he's warm.".
