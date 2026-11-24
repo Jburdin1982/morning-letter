@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-24",
+ "size": 10,
+ "grid": [
+  "NDHKINDRED",
+  "HPCLMRIMEB",
+  "UFPUIHSWMO",
+  "SALSBHBARB",
+  "HOUPBACLUL",
+  "ESCGNEHPHI",
+  "DSKCKBMSBG",
+  "OMYBAPIGME",
+  "KSJHMHOEON",
+  "ASPLENDIDP"
+ ],
+ "ships": [
+  {
+   "word": "HUSHED",
+   "hint": "Made quiet; spoken softly",
+   "r": 1,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "KINDRED",
+   "hint": "Related by family, or alike in nature and feeling",
+   "r": 0,
+   "c": 3,
+   "dir": "A"
+  },
+  {
+   "word": "OBLIGE",
+   "hint": "To do someone a favor, or to require them to do something",
+   "r": 2,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "PLUCKY",
+   "hint": "Brave and spirited when things are hard",
+   "r": 2,
+   "c": 2,
+   "dir": "D"
+  },
+  {
+   "word": "SPLENDID",
+   "hint": "Magnificent, very impressive, or excellent",
+   "r": 9,
+   "c": 1,
+   "dir": "A"
+  }
+ ]
+}

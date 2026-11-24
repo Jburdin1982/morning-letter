@@ -390,6 +390,32 @@
    "comic": "letters/2026-11-23/comic.png",
    "reader": "letters/2026-11-23/reader.html",
    "fleet": "letters/2026-11-23/fleet.json"
+  },
+  {
+   "date": "2026-11-24",
+   "pdf": "letters/2026-11-24/letter.pdf",
+   "pages": 16,
+   "page_images": [
+    "letters/2026-11-24/pg-01.png",
+    "letters/2026-11-24/pg-02.png",
+    "letters/2026-11-24/pg-03.png",
+    "letters/2026-11-24/pg-04.png",
+    "letters/2026-11-24/pg-05.png",
+    "letters/2026-11-24/pg-06.png",
+    "letters/2026-11-24/pg-07.png",
+    "letters/2026-11-24/pg-08.png",
+    "letters/2026-11-24/pg-09.png",
+    "letters/2026-11-24/pg-10.png",
+    "letters/2026-11-24/pg-11.png",
+    "letters/2026-11-24/pg-12.png",
+    "letters/2026-11-24/pg-13.png",
+    "letters/2026-11-24/pg-14.png",
+    "letters/2026-11-24/pg-15.png",
+    "letters/2026-11-24/pg-16.png"
+   ],
+   "comic": "letters/2026-11-24/comic.png",
+   "reader": "letters/2026-11-24/reader.html",
+   "fleet": "letters/2026-11-24/fleet.json"
   }
  ]
 }
