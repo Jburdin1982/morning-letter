@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-25",
+ "size": 10,
+ "grid": [
+  "NJHOMESICK",
+  "EMNJNUTGIT",
+  "EDDWSRSPRA",
+  "JDGIKEBBFD",
+  "OFPNRLLOSJ",
+  "VFKTMICJMP",
+  "IOCRCSLGSN",
+  "AIWYOHFUKT",
+  "LFJJFEWUPC",
+  "HLUREUNION"
+ ],
+ "ships": [
+  {
+   "word": "HOMESICK",
+   "hint": "Sad and longing to be back at your own house and family",
+   "r": 0,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "JOVIAL",
+   "hint": "Cheerful, friendly and full of good humor",
+   "r": 3,
+   "c": 0,
+   "dir": "D"
+  },
+  {
+   "word": "RELISH",
+   "hint": "To enjoy something greatly; also a chopped pickle topping",
+   "r": 2,
+   "c": 5,
+   "dir": "D"
+  },
+  {
+   "word": "REUNION",
+   "hint": "A gathering of people who have been apart for a while",
+   "r": 9,
+   "c": 3,
+   "dir": "A"
+  },
+  {
+   "word": "WINTRY",
+   "hint": "Cold, raw or snowy, the way the coldest season is",
+   "r": 2,
+   "c": 3,
+   "dir": "D"
+  }
+ ]
+}

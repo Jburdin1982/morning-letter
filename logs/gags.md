@@ -17,3 +17,4 @@
 - 2026-11-22: Writing ("Knowledge for the ages!"); Grog carves a stone tablet: "GROG FEAST: MEAT MEAT PIE MORE MEAT"; Glim: "The first written words... are a feast list."; Bonk: "Well, knowledge was saved." / Grog: "GROG NEVER FORGET PIE!".
 - 2026-11-23: Needle and thread ("Sew warm clothes for winter."); Grog sews himself into his sleeping fur, "GROG SEW FUR SHUT. GROG SNUG!"; next morning stuck, "GROG MUST... HOP."; Glim: "He sewed himself in." / Grog: "GROG INVENT SACK RACE!" / Bonk: "Well... he's warm.".
 - 2026-11-24: The telescope ("Study the heavens!"); Grog finds it ("?"), looks at the full moon through it and sees a pie: "MOON... IS PIE!"; Glim: "He thinks the moon is a pie." / Grog: "GROG SAVE ROOM.".
+- 2026-11-25: Mittens ("Warm hands all winter."); Grog finds them ("?"), wears them on his feet, "GROG FEET TOASTY!"; snow; Glim: "His hands are freezing." / Bonk: "Next time... four mittens.".
