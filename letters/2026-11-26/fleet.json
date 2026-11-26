@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-26",
+ "size": 10,
+ "grid": [
+  "EBUSTLINGJ",
+  "UHSAJWLSAC",
+  "PJLKEGTWMO",
+  "BCPRUEHPTD",
+  "EILELNFHER",
+  "ANUFAIJUFO",
+  "TEMDOAEWKW",
+  "DIPKELPLDS",
+  "OLPGDHTOTY",
+  "CBANQUETPO"
+ ],
+ "ships": [
+  {
+   "word": "BANQUET",
+   "hint": "A large, elaborate meal for many guests",
+   "r": 9,
+   "c": 1,
+   "dir": "A"
+  },
+  {
+   "word": "BUSTLING",
+   "hint": "Full of busy, noisy activity",
+   "r": 0,
+   "c": 1,
+   "dir": "A"
+  },
+  {
+   "word": "DROWSY",
+   "hint": "Sleepy and heavy-eyed, as after a big meal",
+   "r": 3,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "GENIAL",
+   "hint": "Friendly, warm and pleasant in manner",
+   "r": 2,
+   "c": 5,
+   "dir": "D"
+  },
+  {
+   "word": "PLUMP",
+   "hint": "Pleasantly round and full in shape",
+   "r": 3,
+   "c": 2,
+   "dir": "D"
+  }
+ ]
+}
