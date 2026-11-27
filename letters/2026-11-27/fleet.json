@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-27",
+ "size": 10,
+ "grid": [
+  "BARGAINBMD",
+  "EUDDKANDHL",
+  "WBNPBRWOBB",
+  "DROUOGNPGB",
+  "TLVFBLKRBD",
+  "SAIAKEKHAA",
+  "THCMLAHPRW",
+  "TJEPDNLBKD",
+  "FRUREWOAJL",
+  "RESTLESSPE"
+ ],
+ "ships": [
+  {
+   "word": "BARGAIN",
+   "hint": "Something bought for less than its usual price",
+   "r": 0,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "DAWDLE",
+   "hint": "To waste time by moving or acting slowly",
+   "r": 4,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "GLEAN",
+   "hint": "To gather bit by bit, as grain left in a field after the harvest",
+   "r": 3,
+   "c": 5,
+   "dir": "D"
+  },
+  {
+   "word": "NOVICE",
+   "hint": "A beginner, new to a skill or activity",
+   "r": 2,
+   "c": 2,
+   "dir": "D"
+  },
+  {
+   "word": "RESTLESS",
+   "hint": "Unable to keep still or settle down and relax",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  }
+ ]
+}

@@ -19,3 +19,4 @@
 - 2026-11-24: The telescope ("Study the heavens!"); Grog finds it ("?"), looks at the full moon through it and sees a pie: "MOON... IS PIE!"; Glim: "He thinks the moon is a pie." / Grog: "GROG SAVE ROOM.".
 - 2026-11-25: Mittens ("Warm hands all winter."); Grog finds them ("?"), wears them on his feet, "GROG FEET TOASTY!"; snow; Glim: "His hands are freezing." / Bonk: "Next time... four mittens.".
 - 2026-11-26: The table ("Gather the tribe. Share."); Grog finds it ("?"), uses it as a shelter in the Thanksgiving sleet, "GROG HOUSE! NO WET!"; the tribe crowds under it: Grog: "GROG TRIBE THANKFUL FOR ROOF!" / Glim: "Well... they gathered.".
+- 2026-11-27: Money/coins ("Trade instead of grab."); Grog finds a coin ("?"), wears it as a necklace, "GROG SHINY!"; Friday before dawn the tribe lines up for more; Bonk: "They camped all night for more shiny." / Grog: "GROG FIRST IN LINE!".
