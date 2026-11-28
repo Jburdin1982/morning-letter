@@ -92,7 +92,7 @@ def raw(fn): return open(SD+fn).read() if _os.path.exists(SD+fn) else ''
 INTRO=P(open(SD+'intro.txt').read().strip())
 ZONE=part('sports.txt','ZONE TABLE').strip().replace('class="mk"','class="mk zt"',1)
 body.append('<h1>The Morning Letter</h1><div class="sub">With the compliments of the Editor, to Jonesboro, Brookland &amp; neighbors</div>')
-body.append('<div class="date">Friday, the Twenty-Seventh of November, 2026</div><div class="orn">&#10086;</div>')
+body.append('<div class="date">Saturday, the Twenty-Eighth of November, 2026</div><div class="orn">&#10086;</div>')
 body.append('<p>Good morning,</p>')
 body.append(INTRO)
 body.append('<h2>The Day Ahead</h2>'); body.append(hourly); body.append(grid)

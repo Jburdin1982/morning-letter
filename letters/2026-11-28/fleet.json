@@ -1,0 +1,53 @@
+{
+ "date": "2026-11-28",
+ "size": 10,
+ "grid": [
+  "UITWROUBEI",
+  "IDRECKLESS",
+  "EALEBJWPKF",
+  "SUONGWGAFI",
+  "CPNSADLNND",
+  "OJJRBMOCLR",
+  "LMHBIUAPSE",
+  "DKHPOMTIIA",
+  "CRDGRACNWR",
+  "FRAGILEEKY"
+ ],
+ "ships": [
+  {
+   "word": "DREARY",
+   "hint": "Dull, gloomy and tiresome, like a gray wet afternoon",
+   "r": 4,
+   "c": 9,
+   "dir": "D"
+  },
+  {
+   "word": "FRAGILE",
+   "hint": "Easily broken or damaged; delicate",
+   "r": 9,
+   "c": 0,
+   "dir": "A"
+  },
+  {
+   "word": "GLOAT",
+   "hint": "To take smug delight in your own success or someone else's bad luck",
+   "r": 3,
+   "c": 6,
+   "dir": "D"
+  },
+  {
+   "word": "RECKLESS",
+   "hint": "Careless of danger and the consequences of one's actions",
+   "r": 1,
+   "c": 2,
+   "dir": "A"
+  },
+  {
+   "word": "SCOLD",
+   "hint": "To speak sharply to someone for doing something wrong",
+   "r": 3,
+   "c": 0,
+   "dir": "D"
+  }
+ ]
+}
